@@ -18,9 +18,14 @@
         <div class="site-wrapper-inner">
             <h1 class="lead text-center text-monospace" id="tk-header">Wanna talk about it?</h1>
             <p class="lead text-center text-monospace">Enter your thoughts, feelings and worries into the box below for an emotionally incosiderate interpretation.</p>
-            <textarea class="form-control" id="tk-entry-box" rows="7"></textarea>
-            <button class="lead btn btn-lrg" id="interpret-btn">Interpret</button>
-            <!-- Content box-->
+            <form role="form" method='POST' action='/'>
+                <textarea name="diary" class="form-control" id="tk-entry-box" rows="7"></textarea>
+                <button class="lead btn btn-lrg" id="interpret-btn">Interpret</button>
+            </form>
+            <br>
+            {% for error in errors %}
+                <h4>{{ error }}</h4>
+            {% endfor %}       
         </div>
     </div>
 
