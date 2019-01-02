@@ -1,5 +1,5 @@
-
 \.idea/
-myenv/bin/python3.7
-
+menv/
+venv/
 __pycache__/
+
